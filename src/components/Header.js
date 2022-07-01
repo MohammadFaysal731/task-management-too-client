@@ -18,7 +18,7 @@ const Header = () => {
                         {menuItem}
                     </ul>
                 </div>
-                <h1 className="text-xl">Task Management Tool</h1>
+                <h1 className="text-xl whitespace-nowrap">Task Management Tool</h1>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">

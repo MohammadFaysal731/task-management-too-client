@@ -20,8 +20,8 @@ const ToDo = () => {
                 task.map(({ _id, task }, index) => <div key={index} className="card w-96 bg-base-100 shadow-xl mx-auto m-3 ">
                     <div className="card-body">
                         <div className="card-actions justify-between">
-                            <label htmlFor="">
-                                <input type="radio" name="" id="" />
+                            <label htmlFor="completeTask">
+                                <input type="checkbox" name="" id="completeTask" />
                             </label>
                             <h1 className='text-2xl text-primary font-bold'>{task}</h1>
                             <button onClick={() => handleUpdate(_id)}>

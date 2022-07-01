@@ -10,7 +10,7 @@ const Footer = () => {
                 <p class="font-bold">
                     Mohammad Faysal<br />This site made 30 june 2022 to 1 july 2022.
                 </p>
-                <p>Copyright &copy;{year}&copy; - All right Mohammad Faysal</p>
+                <p>Copyright &copy;{year}&copy; - All right by Mohammad Faysal</p>
             </div>
             <div>
                 <div class="grid grid-flow-col gap-4">

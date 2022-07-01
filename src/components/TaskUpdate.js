@@ -50,7 +50,7 @@ const TaskUpdate = () => {
                 </div>
             </form>
             <div className="flex justify-center">
-                <Link to='/' className="btn btn-sm btn-outline btn-secondary">Go To Hom</Link>
+                <Link to='/' className="btn btn-sm btn-outline btn-secondary m-6">Go To Hom</Link>
             </div>
         </div>
     );
