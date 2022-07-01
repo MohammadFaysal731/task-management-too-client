@@ -1,4 +1,6 @@
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import './App.css';
 import Calendar from './components/Calendar';
 import CompletedTasks from './components/CompletedTasks';
@@ -16,6 +18,7 @@ function App() {
         <Route path='/todo' element={<ToDo></ToDo>}></Route>
         <Route path='/calendar' element={<Calendar></Calendar>}></Route>
       </Routes>
+      <ToastContainer />
     </div>
   );
 }
