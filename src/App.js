@@ -8,11 +8,12 @@ import Header from './components/Header';
 import Home from './components/Home';
 import TaskUpdate from './components/TaskUpdate';
 import ToDo from './components/ToDo';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="">
-      <Header></Header>
+      <Header />
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/completedtasks' element={<CompletedTasks></CompletedTasks>}></Route>
@@ -20,6 +21,7 @@ function App() {
         <Route path='/todo/:id' element={<TaskUpdate></TaskUpdate>}></Route>
         <Route path='/calendar' element={<Calendar></Calendar>}></Route>
       </Routes>
+      <Footer />
       <ToastContainer />
     </div>
   );
