@@ -1,32 +1,37 @@
 import React from 'react';
-import { useQuery } from 'react-query';
 import { FiEdit2 } from 'react-icons/fi'
-import { ImRadioUnchecked } from 'react-icons/im'
+import useTask from '../hooks/useTask';
+import { useNavigate } from "react-router-dom";
+
 
 const ToDo = () => {
-    const { data, isLoading, refetch } = useQuery('task', () => fetch('http://localhost:5000/task').then(res => res.json()));
+    const [task, setTask] = useTask();
 
-    if (isLoading) {
-        return <p>Loading</p>
+    const navigate = useNavigate();
+
+    const handleUpdate = id => {
+        navigate(`/todo/${id}`);
     }
+
     return (
         <div className=''>
             <h1 className='text-3xl text-secondary font-bold text-center underline'>To-Do</h1>
             {
-                data.map(({ task }, index) => <div key={index} refetch={refetch()} class="card w-96 bg-base-100 shadow-xl mx-auto m-3">
-                    <div class="card-body">
-                        <div class="card-actions justify-between">
-                            <button className='btn btn-outline btn-secondary btn-xs'>
-                                <ImRadioUnchecked />
-                            </button>
+                task.map(({ _id, task }, index) => <div key={index} className="card w-96 bg-base-100 shadow-xl mx-auto m-3 ">
+                    <div className="card-body">
+                        <div className="card-actions justify-between">
+                            <label htmlFor="">
+                                <input type="radio" name="" id="" />
+                            </label>
                             <h1 className='text-2xl text-primary font-bold'>{task}</h1>
-                            <button class="btn btn-outline btn-secondary btn-xs">
+                            <button onClick={() => handleUpdate(_id)}>
                                 <FiEdit2 />
                             </button>
                         </div>
                     </div>
                 </div>)
             }
+
         </div>
 
 

@@ -1,11 +1,11 @@
 import React from 'react';
-import ToDo from './ToDo';
 import { MdAddCircleOutline } from 'react-icons/md';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
-
+import ToDo from './ToDo';
 const Home = () => {
     const { register, handleSubmit, reset } = useForm();
+
     const onSubmit = data => {
         const newTasks = data.task;
         fetch('http://localhost:5000/task', {
