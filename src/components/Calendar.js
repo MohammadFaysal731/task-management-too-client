@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { DayPicker } from 'react-day-picker';
 import 'react-day-picker/dist/style.css';
+import { Link } from 'react-router-dom';
 const Calendar = () => {
     const [date, setDate] = useState(new Date());
 
@@ -14,6 +15,9 @@ const Calendar = () => {
                     selected={date}
                     onSelect={setDate}
                 />
+            </div>
+            <div className="flex justify-center">
+                <Link to='/' className="btn btn-sm btn-outline btn-secondary m-6">Go To Hom</Link>
             </div>
         </div>
     );
