@@ -10,7 +10,7 @@ const TaskUpdate = () => {
     const [updateTasks, setUpdateTasks] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:5000/task/${id}`)
+        fetch(`https://metric-eh-88898.herokuapp.com/task/${id}`)
             .then(res => res.json())
             .then(data => {
                 setUpdateTasks(data);
@@ -19,7 +19,7 @@ const TaskUpdate = () => {
 
     const onSubmit = data => {
         const updateTask = data.task;
-        fetch(`http://localhost:5000/task/${updateTasks?._id}`, {
+        fetch(`https://metric-eh-88898.herokuapp.com/task/${updateTasks?._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
